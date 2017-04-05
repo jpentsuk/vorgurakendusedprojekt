@@ -17,20 +17,46 @@
         </ul>
     </nav>
 </div>
-<form>
-    <h2>Sisesta uus plaat</h2>
-    <br>
-    Plaadinimi
-    <br>
-    <input type="text" name="nimi">
-    <br>
-    Firma
-    <br>
-    <input type="text" name="firma">
-    <br>
-    Sisesta andmebaasi
-    <br>
-    <input type="submit" name="sisesta">
+<form method="POST" action="sisestustehtud.php">
+
+    Helilooja:<br/><br/><input type="text" name="helilooja"> <br/><br/>
+
+    Teose nimi:
+    <br/>
+    <input type="text" name="teosenimi"><br/>
+
+    <br/>
+
+    Teose tüüp: <br/>
+    <select name="tyyp">
+
+        <option value="symf">Sümfoonia
+
+        <option value="kontsert">Instrumentaalkontsert
+
+        <option value="ava">Avamäng
+
+    </select>
+    <br/>
+
+    Dirigent:<br/><br/><input type="text" name="dirigent"> <br/><br/>
+
+    Orkester:<br/><br/><input type="text" name="orkester"> <br/><br/>
+
+    <input type="submit" name="Saada" value="Saada">
+
+
+    </select>
+
+
+
+
+
+
+
+
+
+
 
 </form>
 <br>
