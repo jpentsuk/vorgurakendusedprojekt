@@ -21,9 +21,10 @@
 echo "tere administraator";
 ?>
 <br>
-Andmete muutmine
+
+<a href="andmetemuutmine.php">Andmete muutmine</a>
 <br>
-Andmete kustutamine
+<a href="andmetekustutamine.php">Andmete kustutamine</a>
 <br>
 Logi välja <a href="rakenduseavaleht.html">siit</a>
 </body>

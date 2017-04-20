@@ -10,6 +10,7 @@ teosenimi  		varchar(50) null,
 tyyp 		varchar(50) null,    
 dirigent	    varchar(50) null,  
 orkester    varchar(50) null,  
+plaat       varchar(50) null,  
 		  
 	
  

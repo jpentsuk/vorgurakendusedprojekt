@@ -37,8 +37,8 @@ else if ($_POST[tyyp]=="ava")
 }
 
 #Need on tabeli väljad esimeses reas ja teises reas on vormiväljad
-$abi6="insert into teosed (id,helilooja, teosenimi, tyyp, dirigent, orkester) values 
-('$_POST[id]','$_POST[helilooja]','$_POST[teosenimi]','$teos','$_POST[dirigent]','$_POST[orkester]')";
+$abi6="insert into teosed (id,helilooja, teosenimi, tyyp, dirigent, orkester, plaat) values 
+('$_POST[id]','$_POST[helilooja]','$_POST[teosenimi]','$teos','$_POST[dirigent]','$_POST[orkester]','$_POST[plaat]')";
 //Lisame tabelisse inimesed kasutaja sisestatud väärtused.
 
 mysql_query($abi6);
