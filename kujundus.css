@@ -4,6 +4,14 @@ body
     background-size: 85%;
     background-repeat: no-repeat;
 }
+.sisestamine
+{
+    background-color: crimson;
+}
+#sisestused
+{
+    font-size: 14px;
+}
 ul
 {
     list-style-type: none;
@@ -27,8 +35,4 @@ li a
 li a:hover
 {
     background-color: black;
-}
-input[type="text"]
-{
-    background-color: darkblue;
 }

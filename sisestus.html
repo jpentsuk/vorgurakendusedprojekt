@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Plaatide sisestamine andmebaasi</title>
+    <script src="sisestusskript.js"></script>
     <link rel="stylesheet" type="text/css" href="kujundus.css" />
 </head>
 <body>
@@ -17,18 +18,24 @@
         </ul>
     </nav>
 </div>
+<br><br>
+<div id="sisestused">
 <form method="POST" action="sisestustehtud.php">
 
-    Helilooja:<br/><br/><input type="text" name="helilooja"> <br/><br/>
+    <table class="sisestamine" border="0" cellpadding="10" cellspacing="1" width="500" align="center">
+        <tr>
+        <td>Helilooja:</td>
+        <td><input type="text" name="helilooja"></td>
+        </tr>
 
-    Teose nimi:
-    <br/>
-    <input type="text" name="teosenimi"><br/>
+        <tr>
+        <td>Teose nimi:</td>
+        <td><input type="text" name="teosenimi"></td>
+        </tr>
 
-    <br/>
-
-    Teose tüüp: <br/>
-    <select name="tyyp">
+    <tr>
+        <td>Teose tüüp:</td>
+        <td><select name="tyyp">
 
         <option value="symf">Sümfoonia
 
@@ -36,31 +43,43 @@
 
         <option value="ava">Avamäng
 
+    </select></td>
+    </tr>
+
+
+        <tr>
+            <td>Dirigent:</td>
+            <td><input type="text" name="dirigent"></td>
+        </tr>
+
+        <tr>
+            <td>Orkester:</td>
+            <td><input type="text" name="orkester"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>Plaadi ID:</td>
+            <td><input type="text" name="plaat"></td>
+
+        </tr>
+
+        <tr>
+            <td><input type="submit" name="Saada" value="Saada"></td>
+        </tr>
+
+
+
+
     </select>
-    <br/>
 
-    Dirigent:<br/><br/><input type="text" name="dirigent"> <br/><br/>
-
-    Orkester:<br/><br/><input type="text" name="orkester"> <br/><br/>
-
-    Plaadi ID:<br/><br/><input type="text" name="plaat"> <br/><br/>
-
-    <input type="submit" name="Saada" value="Saada">
-
-
-    </select>
-
-
-
-
-
-
-
-
-
-
-
+    </table>
 </form>
+</div>
+
+
+
 <br>
 <a href="rakenduseavaleht.html">Avalehele</a>
 </body>
