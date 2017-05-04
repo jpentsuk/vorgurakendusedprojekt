@@ -9,6 +9,7 @@
 <div>
     <nav>
         <ul>
+            <li><a href="rakenduseavaleht.html">Avalehele</a></li>
             <li><a href="administraatorile.php">Administraatorile</a></li>
             <li><a href="sisestus.html">Sisesta uus</a></li>
             <li><a href="otsing.html">Otsi</a></li>
@@ -20,7 +21,7 @@
 <?php
 header('charset=utf-8');
 
-echo "lisatud";
+echo "<script type='text/javascript'>alert('Andmed edukalt lisatud!')</script>";
 include("uhendus.php");
 
 if ($_POST[tyyp]=="symf")
@@ -45,7 +46,7 @@ mysql_query($abi6);
 // Käivitame lisamislause
 ?>
 <br>
-<a href="rakenduseavaleht.html">Avalehele</a>
+
 </body>
 </html>
 

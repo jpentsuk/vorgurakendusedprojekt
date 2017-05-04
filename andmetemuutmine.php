@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Administraatorile</title>
+    <title>Plaadikogu andmebaas</title>
+    <script src="sisestusskript.js"></script>
     <link rel="stylesheet" type="text/css" href="kujundus.css" />
 </head>
 <body>
+
+<div>
+    <nav>
+        <ul>
+            <li><a href="rakenduseavaleht.html">Avalehele</a></li>
+            <li><a href="administraatorile.php">Administraatorile</a></li>
+            <li><a href="sisestus.html">Sisesta uus</a></li>
+            <li><a href="otsing.html">Otsi</a></li>
+        </ul>
+    </nav>
+</div>
+<br>
 
 
 
@@ -29,13 +42,24 @@ while($row = mysql_fetch_assoc($tulemus))
 }
 
 ?>
+<div id="sisestused">
 
-Vali plaat, mille andmeid soovid muuta:
-<br>
+
 <form method="GET" action="andmetemuutmineedasi.php">
-    <select name="plaat"><? echo $plaadid; ?></select>
-    <INPUT NAME="enter" TYPE="submit" VALUE="Edasi"><br><br>
-</form>
+    <table class="sisestamine">
+        <tr>
+            <th>Vali plaat, mille andmeid soovid muuta:</th>
+        </tr>
+        <tr>
+            <td><select name="plaat"><? echo $plaadid; ?></select></td>
+        </tr>
 
+        <tr>
+            <td><INPUT NAME="enter" TYPE="submit" VALUE="Edasi"></td>
+        </tr>
+
+    </table>
+</form>
+</div>
 </body>
 </html>

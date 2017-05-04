@@ -19,20 +19,20 @@
 </div>
 <br>
 <div id="sisestused">
-    <table class="sisestamine">
-        <tr>
-            <th>Vaata andmeid:</th>
-        </tr>
-        <tr>
-            <td><a href="orkestrid.php">Kuva kõik orkestrid</a></td>
-        </tr>
-        <tr>
-            <td><a href="heliloojad.php">Kuva kõik heliloojad</a> </td>
-        </tr>
-    </table>
+    <?php
 
+    include ("uhendus.php");
+    $heliloojad="select helilooja from teosed GROUP BY helilooja";//võtab baasist ainult unikaalsed väärtused
+    $result = mysql_query($heliloojad) or die(mysql_error());
+    echo "<table class='sisestamine'><tr><td>Heliloojad:</td></tr><tr></tr>";
+    while($row = mysql_fetch_assoc($result))
+    {
+        echo "<tr>";
+        echo "<td>" . $row['helilooja'] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
 </div>
-
-
 </body>
 </html>

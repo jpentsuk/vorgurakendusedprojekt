@@ -19,20 +19,20 @@
 </div>
 <br>
 <div id="sisestused">
-    <table class="sisestamine">
-        <tr>
-            <th>Vaata andmeid:</th>
-        </tr>
-        <tr>
-            <td><a href="orkestrid.php">Kuva kõik orkestrid</a></td>
-        </tr>
-        <tr>
-            <td><a href="heliloojad.php">Kuva kõik heliloojad</a> </td>
-        </tr>
-    </table>
+<?php
 
+include ("uhendus.php");
+$orkestrid="select orkester from teosed GROUP BY orkester";
+$result = mysql_query($orkestrid) or die(mysql_error());
+echo "<table class='sisestamine'><tr><td>Orkestrid:</td></tr><tr></tr>";
+    while($row = mysql_fetch_assoc($result))
+    {
+    echo "<tr>";
+        echo "<td>" . $row['orkester'] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+?>
 </div>
-
-
 </body>
 </html>
