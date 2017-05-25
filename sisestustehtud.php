@@ -24,22 +24,28 @@ header('charset=utf-8');
 echo "<script type='text/javascript'>alert('Andmed edukalt lisatud!')</script>";
 include("uhendus.php");
 
-if ($_POST[tyyp]=="symf")
+$id = htmlspecialchars($_POST[id]);
+$helilooja = htmlspecialchars($_POST[helilooja]);
+$teosenimi = htmlspecialchars($_POST[teosenimi]);
+$dirigent = htmlspecialchars($_POST[dirigent]);
+$orkester = htmlspecialchars($_POST[orkester]);
+$plaat = htmlspecialchars($_POST[plaat]);
+if (htmlspecialchars($_POST[tyyp]=="symf"))
 {
     $teos = "Sümfoonia";
 }
-else if ($_POST[tyyp]=="kontsert")
+else if (htmlspecialchars($_POST[tyyp]=="kontsert"))
 {
     $teos = "Instrumentaalkontsert";
 }
-else if ($_POST[tyyp]=="ava")
+else if (htmlspecialchars($_POST[tyyp]=="ava"))
 {
     $teos = "Avamäng";
 }
 
 #Need on tabeli väljad esimeses reas ja teises reas on vormiväljad
 $abi6="insert into teosed (id,helilooja, teosenimi, tyyp, dirigent, orkester, plaat) values 
-('$_POST[id]','$_POST[helilooja]','$_POST[teosenimi]','$teos','$_POST[dirigent]','$_POST[orkester]','$_POST[plaat]')";
+('$id','$helilooja','$teosenimi','$teos','$dirigent','$orkester','$plaat')";
 //Lisame tabelisse inimesed kasutaja sisestatud väärtused.
 
 mysql_query($abi6);

@@ -1,9 +1,23 @@
 <?php
 
-
-if($_REQUEST['submit']=="Logi sisse" && $_POST['kasutajanimi']=="admin" && $_POST['parool']=="parool") {
-
-    header("Location: adminsees.php");
+// sessiooni loomisel on kasutatud õpetust lehelt:
+// http://www.w3tweaks.com/php/simple-php-login-and-logout-script-using-php-session-and-database-using-mysql.html
+if (isset($_POST['submit']))
+{
+    include("uhendus.php");
+    session_start();
+    $username=htmlspecialchars($_POST['username']);
+    $password=htmlspecialchars($_POST['password']);
+    $_SESSION['login_user']=$username;
+    $query = mysql_query("SELECT username FROM adminn WHERE username='$username' and password='$password'");
+    if (mysql_num_rows($query) != 0)
+    {
+        echo "<script language='javascript' type='text/javascript'> location.href='adminsees.php' </script>";
+    }
+    else
+    {
+        echo "<script type='text/javascript'>alert('Vale kasutajanimi või parool!')</script>";
+    }
 }
 
 ?>
@@ -28,16 +42,19 @@ if($_REQUEST['submit']=="Logi sisse" && $_POST['kasutajanimi']=="admin" && $_POS
 </div>
 <br><br>
 <div id="sisestused">
+    <form method="post" action="administraatorile.php">
     <table class="sisestamine">
-<form method="post" action="administraatorile.php">
+
     <tr>
         <th>Sisesta kasutajanimi ja parool</th>
+        <th></th>
     </tr>
     <tr>
-        <td>Kasutajanimi<input type="text" name="kasutajanimi"></td>
-        <td>Parool<input type="password" name="parool"></td>
+        <td>Kasutajanimi<input type="text" name="username"></td>
+        <td>Parool<input type="password" name="password"></td>
     </tr>
     <tr>
+        <td></td>
         <td><input type="submit" name="submit" value="Logi sisse"></td>
     </tr>
 

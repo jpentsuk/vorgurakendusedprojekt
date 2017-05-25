@@ -31,7 +31,7 @@
             <td>Kustuta andmeid <a href="andmetekustutamine.php">siin!</a></td>
         </tr>
         <tr>
-            <td>Logi välja <a href="rakenduseavaleht.html">siit!</a></td>
+            <td>Logi välja <a href="logout.php">siit!</a></td>
         </tr>
     </table>
 </div>
