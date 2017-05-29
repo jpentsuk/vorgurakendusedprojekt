@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Administraatorile</title>
-    <script src="sisestusskript.js"></script>
     <link rel="stylesheet" type="text/css" href="kujundus.css" />
 </head>
 <body>
@@ -34,7 +33,7 @@ if ($_REQUEST[submit]=="Kustuta" && is_array($_GET[box1]))
 
     {
 
-        $q="delete from teosed where id='$value'";
+        $q="DELETE FROM teosed WHERE id='$value'";
 
         mysql_query($q);
 
@@ -42,7 +41,7 @@ if ($_REQUEST[submit]=="Kustuta" && is_array($_GET[box1]))
 
 }
 
-$tul = mysql_query("select * from teosed");
+$tul = mysql_query("SELECT * FROM teosed");
 
 if ($tul) {
 

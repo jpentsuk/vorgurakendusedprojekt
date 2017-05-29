@@ -22,7 +22,7 @@
     <?php
 
     include ("uhendus.php");
-    $heliloojad="select helilooja, teosenimi, tyyp from teosed where tyyp='Avamäng'";//võtab baasist ainult avamängud
+    $heliloojad="SELECT helilooja, teosenimi, tyyp FROM teosed WHERE tyyp='Avamäng'";//võtab baasist ainult avamängud
     $result = mysql_query($heliloojad) or die(mysql_error());
     echo "<table class='sisestamine'><tr>
                                         <td>Helilooja</td>

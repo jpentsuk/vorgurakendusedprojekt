@@ -22,7 +22,7 @@
 <?php
 
 include ("uhendus.php");
-$orkestrid="select orkester from teosed GROUP BY orkester";
+$orkestrid="SELECT orkester FROM teosed GROUP BY orkester";
 $result = mysql_query($orkestrid) or die(mysql_error());
 echo "<table class='sisestamine'><tr><td>Orkestrid:</td></tr><tr></tr>";
     while($row = mysql_fetch_assoc($result))

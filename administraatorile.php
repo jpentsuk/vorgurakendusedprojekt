@@ -9,7 +9,7 @@ if (isset($_POST['submit']))
     $username=htmlspecialchars($_POST['username']);
     $password=htmlspecialchars($_POST['password']);
     $_SESSION['login_user']=$username;
-    $query = mysql_query("SELECT username FROM adminn WHERE username='$username' and password='$password'");
+    $query = mysql_query("SELECT username FROM adminn WHERE username='$username' AND password='$password'");
     if (mysql_num_rows($query) != 0)
     {
         echo "<script language='javascript' type='text/javascript'> location.href='adminsees.php' </script>";

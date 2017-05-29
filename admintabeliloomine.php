@@ -1,7 +1,7 @@
 <?php
 include("uhendus.php");
-//Võtame külge faili, mis loob ühenduse serveriga ja valitud andmebaasiga
-$abi2="create table adminn
+
+$abi2="CREATE TABLE adminn
 
 (
 id			integer not null auto_increment, 

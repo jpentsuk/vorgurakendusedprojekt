@@ -41,7 +41,7 @@ if ($_REQUEST[enter]=="Muuda")
 
 
 
-$tu="select * from teosed where id='$_GET[plaat]';";
+$tu="SELECT * FROM teosed WHERE id='$_GET[plaat]';";
 
 $tulemus=mysql_query($tu)or die (mysql_error());
 

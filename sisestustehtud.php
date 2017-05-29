@@ -43,13 +43,13 @@ else if (htmlspecialchars($_POST[tyyp]=="ava"))
     $teos = "Avamäng";
 }
 
-#Need on tabeli väljad esimeses reas ja teises reas on vormiväljad
-$abi6="insert into teosed (id,helilooja, teosenimi, tyyp, dirigent, orkester, plaat) values 
+
+$abi6="INSERT INTO teosed (id,helilooja, teosenimi, tyyp, dirigent, orkester, plaat) VALUES 
 ('$id','$helilooja','$teosenimi','$teos','$dirigent','$orkester','$plaat')";
-//Lisame tabelisse inimesed kasutaja sisestatud väärtused.
+
 
 mysql_query($abi6);
-// Käivitame lisamislause
+
 ?>
 <br>
 

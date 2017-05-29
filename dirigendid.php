@@ -22,7 +22,7 @@
     <?php
 
     include ("uhendus.php");
-    $heliloojad="select dirigent from teosed GROUP BY dirigent";//võtab baasist ainult unikaalsed väärtused
+    $heliloojad="SELECT dirigent FROM teosed GROUP BY dirigent";//võtab baasist ainult unikaalsed väärtused
     $result = mysql_query($heliloojad) or die(mysql_error());
     echo "<table class='sisestamine'><tr><td>Dirigendid:</td></tr><tr></tr>";
     while($row = mysql_fetch_assoc($result))
